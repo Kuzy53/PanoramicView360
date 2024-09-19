@@ -1,4 +1,4 @@
-@import "src/scss/variables";
+@import 'src/scss/variables';
 
 .inpageNav_wrapper {
   position: fixed;
@@ -31,7 +31,6 @@
   border-radius: 16px;
   border: 2px solid $text_icons-Borders;
   background: $bg-secondary-blured;
-
 
   .item {
     display: flex;
@@ -81,7 +80,7 @@
   }
 
   svg path {
-    fill: #FFFFFF;
+    fill: #ffffff;
     fill-opacity: 0.5;
   }
 
@@ -95,32 +94,30 @@
 }
 
 @media screen and (max-width: 991px) {
-    .inpageNav_wrapper {
-      bottom: 0;
-      width: 100%;
-      left: 0;
-      white-space: nowrap;
+  .inpageNav_wrapper {
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    white-space: nowrap;
 
-      .bgBlur {
-        border-radius: 0px;
-      }
-
-      .inpageNav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        padding: 16px 0 8px 16px;
-        gap: 4px;
-        border-radius: 0;
-        border: none;
-        background: $bg-secondary-blured;
-        margin: 0 auto;
-        overflow-x: auto;
-      }
-
-
+    .bgBlur {
+      border-radius: 0px;
     }
+
+    .inpageNav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 16px 0 8px 16px;
+      gap: 4px;
+      border-radius: 0;
+      border: none;
+      background: $bg-secondary-blured;
+      margin: 0 auto;
+      overflow-x: auto;
+    }
+  }
 
   .inpageNav_description {
     bottom: 0;
@@ -137,5 +134,4 @@
       font-weight: 400;
     }
   }
-
 }

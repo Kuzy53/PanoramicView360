@@ -5,7 +5,7 @@ import {
   PanoramaContainer,
   PanoramaContent,
   TypographyDescription,
-  TypographyH1
+  TypographyH1,
 } from '../../styles/panorama';
 import React, { useState } from 'react';
 import { Pano } from '../panorama-360';
@@ -27,7 +27,7 @@ export const Panorama: React.FC<PanoramaProps> = ({ initialPanoramaId }) => {
         Готовы ли вы отправиться вместе с нами <br /> в уникальную морскую экскурсию по нашему офису?
       </TypographyDescription> */}
       <PanoramaContainer>
-        <a id="panorama"></a>
+        <a id='panorama'></a>
         <PanoramaContent isActive={isActive}>
           <Pano isMovable={isActive} initialPanoramaId={initialPanoramaId} />
         </PanoramaContent>

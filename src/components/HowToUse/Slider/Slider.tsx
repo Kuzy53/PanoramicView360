@@ -35,7 +35,9 @@ export const Slider = () => {
   }, [currentSlide, progress]);
 
   useEffect(() => {
-    const animationImage = setTimeout(() => { setIsActive(!isActive); }, 50);
+    const animationImage = setTimeout(() => {
+      setIsActive(!isActive);
+    }, 50);
 
     return () => clearTimeout(animationImage);
   }, [currentSlide]);

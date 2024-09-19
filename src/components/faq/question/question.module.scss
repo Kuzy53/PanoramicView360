@@ -1,4 +1,4 @@
-@import "src/scss/variables";
+@import 'src/scss/variables';
 
 .item {
   border-radius: 16px;
@@ -48,8 +48,6 @@
   }
 }
 
-
-
 .accordionContent {
   max-height: 0;
   font-size: 1rem;
@@ -83,15 +81,15 @@
 
 @keyframes faq {
   from {
-      border: 1px solid transparent;
-      overflow: hidden;
-      background: transparent;
-    }
+    border: 1px solid transparent;
+    overflow: hidden;
+    background: transparent;
+  }
 
   to {
-      border: 1px solid $text_icons-Borders;
-      background: $bg-secondary;
-    }
+    border: 1px solid $text_icons-Borders;
+    background: $bg-secondary;
+  }
 }
 
 @keyframes faqBack {

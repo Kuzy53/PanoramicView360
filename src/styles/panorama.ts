@@ -130,7 +130,7 @@ export const PanoramaContainer = styled.div`
 `;
 
 export const PanoramaContent = styled.div<PanoramaProps>`
-  filter: ${props => (props.isActive ? 'none' : 'brightness(0.3)')};
+  filter: ${(props) => (props.isActive ? 'none' : 'brightness(0.3)')};
   width: 100%;
   height: 40vw;
   overflow: hidden;
@@ -165,7 +165,7 @@ export const PanoramaContent = styled.div<PanoramaProps>`
 `;
 
 export const PanoContainer = styled.div<PanoProps>`
-  filter: ${props => (props.isLoading ? 'blur(10px)' : 'blur(0px)')};
+  filter: ${(props) => (props.isLoading ? 'blur(10px)' : 'blur(0px)')};
   width: 100%;
   height: 100%;
   border-radius: 60px;

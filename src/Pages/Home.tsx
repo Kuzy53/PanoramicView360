@@ -11,7 +11,8 @@ import questions from '../components/faq/data/home';
 export const Home = () => {
   const FAQBadge = 'All Your Questions Answered';
   const FAQTitle = 'Panoramic View FAQs';
-  const FAQSubtitle = 'FAQ отвечает на важные вопросы, которые могут возникнуть у пользователей, и помогает создать полное представление о возможностях и удобстве использования платформы Panoramic View.';
+  const FAQSubtitle =
+    'FAQ отвечает на важные вопросы, которые могут возникнуть у пользователей, и помогает создать полное представление о возможностях и удобстве использования платформы Panoramic View.';
   const formTitle = 'Home';
 
   return (
@@ -20,12 +21,7 @@ export const Home = () => {
       <HowToUse />
       {/* <Features /> */}
       <Pricing />
-      <FAQ
-        badge={FAQBadge}
-        faqData={questions}
-        subtitle={FAQSubtitle}
-        title={FAQTitle}
-      />
+      <FAQ badge={FAQBadge} faqData={questions} subtitle={FAQSubtitle} title={FAQTitle} />
       <Form title={formTitle} />
       <CTA />
     </>

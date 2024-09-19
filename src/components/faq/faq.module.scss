@@ -1,6 +1,5 @@
-@import "src/scss/variables";
-@import "src/scss/mixin";
-
+@import 'src/scss/variables';
+@import 'src/scss/mixin';
 
 .content {
   display: flex;
@@ -19,11 +18,11 @@
     }
 
     .title {
-      @include h2title
+      @include h2title;
     }
 
     .subtitle {
-      @include subtitle
+      @include subtitle;
     }
   }
 
@@ -95,9 +94,7 @@
   }
 }
 
-
 @media screen and (max-width: 991px) {
-
 }
 
 @media screen and (max-width: 767px) {
@@ -141,7 +138,7 @@
       align-items: center;
       position: absolute;
       bottom: 0;
-      background: linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, #121212 76.56%);
+      background: linear-gradient(180deg, rgba(18, 18, 18, 0) 0%, #121212 76.56%);
       backdrop-filter: blur(2px);
       height: 92px;
       width: 100%;

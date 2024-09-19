@@ -1,6 +1,5 @@
-@import "src/scss/variables";
-@import "src/scss/mixin";
-
+@import 'src/scss/variables';
+@import 'src/scss/mixin';
 
 .conteiner {
   display: flex;
@@ -71,7 +70,7 @@
 
         .calc_slider {
           width: 100%;
-          input[type="range"] {
+          input[type='range'] {
             -webkit-appearance: none;
             width: 100%;
             height: 8px;
@@ -80,7 +79,7 @@
             outline: none;
           }
 
-          input[type="range"]::-webkit-slider-thumb {
+          input[type='range']::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
             width: 24px;
@@ -91,15 +90,15 @@
             cursor: pointer;
           }
 
-          input[type="range"]::-webkit-slider-runnable-track {
+          input[type='range']::-webkit-slider-runnable-track {
             background-color: transparent;
           }
 
-          input[type="range"]::-moz-range-track {
+          input[type='range']::-moz-range-track {
             background-color: transparent;
           }
 
-          input[type="range"]::-moz-range-thumb {
+          input[type='range']::-moz-range-thumb {
             width: 24px;
             height: 24px;
             border-radius: 12px;
@@ -108,7 +107,7 @@
             cursor: pointer;
           }
 
-          input[type="range"]::-ms-thumb {
+          input[type='range']::-ms-thumb {
             width: 24px;
             height: 24px;
             border-radius: 12px;
@@ -117,7 +116,7 @@
             cursor: pointer;
           }
 
-          input[type="range"]::-ms-track {
+          input[type='range']::-ms-track {
             background-color: transparent;
           }
         }
@@ -125,27 +124,26 @@
     }
   }
 
-  .block__wrapper{
+  .block__wrapper {
     display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-auto-columns: 1fr;
-      gap: 16px 16px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 16px 16px;
     width: 100%;
-      grid-template-areas:
-    "b1 b2"
-    "b3 b4";
+    grid-template-areas:
+      'b1 b2'
+      'b3 b4';
     @media screen and (max-width: 479px) {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr;
       gap: 12px 12px;
       grid-template-areas:
-    "b1"
-    "b2"
-    "b3"
-    "b4";
+        'b1'
+        'b2'
+        'b3'
+        'b4';
     }
-
 
     .block {
       width: 100%;
@@ -187,14 +185,20 @@
       }
     }
 
-    .block1 { grid-area: b2; }
+    .block1 {
+      grid-area: b2;
+    }
 
-    .block2 { grid-area: b1; }
+    .block2 {
+      grid-area: b1;
+    }
 
-    .block3 { grid-area: b3; }
+    .block3 {
+      grid-area: b3;
+    }
 
-    .block4 { grid-area: b4; }
-
+    .block4 {
+      grid-area: b4;
+    }
   }
-
 }

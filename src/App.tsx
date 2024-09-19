@@ -13,10 +13,14 @@ import { Navigation } from './components/Navigation/navigation';
 import { Home } from './Pages/Home';
 import { Footer } from './components/footer/footer';
 
-const About = lazy(() => import(/* webpackChunkName: "About" */'./Pages/AboutUs'));
-const PlaceStation = lazy(() => import(/* webpackChunkName: "PlaceStation" */'./Pages/PutAStation'));
-const Partnership = lazy(() => import(/* webpackChunkName: "Partnership" */'./Pages/BecomeAPartner'));
-const NotFound = lazy(() => import(/* webpackChunkName: "NotFound" */'./Pages/NotFound'));
+const About = lazy(() => import(/* webpackChunkName: "About" */ './Pages/AboutUs'));
+const PlaceStation = lazy(
+  () => import(/* webpackChunkName: "PlaceStation" */ './Pages/PutAStation')
+);
+const Partnership = lazy(
+  () => import(/* webpackChunkName: "Partnership" */ './Pages/BecomeAPartner')
+);
+const NotFound = lazy(() => import(/* webpackChunkName: "NotFound" */ './Pages/NotFound'));
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -34,7 +38,7 @@ const ScrollToTop = () => {
 const App = () => (
   <div className={s.App}>
     <AnimatedCursor
-      color="255, 241, 85"
+      color='255, 241, 85'
       innerScale={3}
       innerSize={20}
       outerAlpha={1}
@@ -45,23 +49,23 @@ const App = () => (
       }}
     />
     <div className={s.app_wrapper}>
-
       <Header />
       <Navigation />
       <ScrollToTop />
-      <Suspense fallback={(
-        <div className={s.loader__wrapper}>
-          <div className={s.loader} />
-        </div>
-      )}
+      <Suspense
+        fallback={
+          <div className={s.loader__wrapper}>
+            <div className={s.loader} />
+          </div>
+        }
       >
         <Routes>
-          <Route element={<Home />} path="/" />
-          <Route element={<Home />} path="/home" />
-          <Route element={<About />} path="/about" />
-          <Route element={<PlaceStation />} path="/place-station" />
-          <Route element={<Partnership />} path="/partnership" />
-          <Route element={<NotFound />} path="*" />
+          <Route element={<Home />} path='/' />
+          <Route element={<Home />} path='/home' />
+          <Route element={<About />} path='/about' />
+          <Route element={<PlaceStation />} path='/place-station' />
+          <Route element={<Partnership />} path='/partnership' />
+          <Route element={<NotFound />} path='*' />
           {/* <Route element={} path="/privacy" /> */}
         </Routes>
       </Suspense>

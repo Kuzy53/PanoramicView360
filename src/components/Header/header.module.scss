@@ -1,4 +1,4 @@
-@import "src/scss/variables";
+@import 'src/scss/variables';
 
 .header {
   position: fixed;
@@ -28,7 +28,6 @@
 
     .logoBig {
       width: 70px;
-
     }
 
     .logoMini {
@@ -83,7 +82,6 @@
         font-size: 1rem;
       }
     }
-
   }
 
   button {
@@ -165,8 +163,6 @@
       transform: rotateX(180deg);
     }
   }
-
-
 
   .actions {
     display: flex;
@@ -326,7 +322,6 @@
     .navigation_mobile {
       display: block;
 
-
       .mobileHidden {
         display: none;
         &:not(.active_dropdown) {
@@ -473,10 +468,6 @@
   }
 }
 
-
-
-
-
 /*
 Состояние активной вкладки добавить в js
 
@@ -486,8 +477,3 @@
 }
 
 */
-
-
-
-
-

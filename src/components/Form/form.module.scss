@@ -1,5 +1,5 @@
-@import "src/scss/variables";
-@import "src/scss/mixin";
+@import 'src/scss/variables';
+@import 'src/scss/mixin';
 
 .form__wrapper {
   display: grid;
@@ -7,8 +7,7 @@
   gap: 64px;
   padding: 96px 32px;
   width: 100%;
-  grid-template-areas:
-    "image form";
+  grid-template-areas: 'image form';
 
   .form {
     display: flex;
@@ -57,8 +56,8 @@
       grid-column-gap: 12px;
       grid-row-gap: 12px;
       grid-template-areas:
-      "first last"
-      "city city";
+        'first last'
+        'city city';
       margin-bottom: 36px;
 
       .form_firstname {
@@ -81,8 +80,8 @@
       grid-column-gap: 8px;
       grid-row-gap: 12px;
       grid-template-areas:
-      "iti iti iti iti"
-      "email email email email";
+        'iti iti iti iti'
+        'email email email email';
       margin-bottom: 24px;
 
       .flag_dropdown {
@@ -105,7 +104,7 @@
       font-size: 1rem;
       font-weight: 400;
       letter-spacing: -0.41px;
-      font-family: "Inter", sans-serif;
+      font-family: 'Inter', sans-serif;
       width: 100%;
     }
 
@@ -134,7 +133,7 @@
     align-items: flex-end;
     grid-area: image;
     @media screen and (max-width: 767px) {
-    display: none;
+      display: none;
     }
 
     .formImage {
@@ -165,27 +164,27 @@
     z-index: -1;
     opacity: 0;
   }
-  .custom_checkbox + label{
+  .custom_checkbox + label {
     display: inline-flex;
     align-items: center;
     user-select: none;
   }
 
   .custom_checkbox + label::before {
-      content: "";
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      position: absolute;
-      left: 0;
-      top: 0;
-      border-radius: 6px;
-      border: 1px solid $text_icons-Borders;
-      background: $bg-secondary;
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 6px;
+    border: 1px solid $text_icons-Borders;
+    background: $bg-secondary;
   }
   .custom_checkbox:checked + .form_checkbox::before {
     border-radius: 4px;
-    background: url("img/checkbox.svg") no-repeat 7px 9px;
+    background: url('img/checkbox.svg') no-repeat 7px 9px;
     background-size: auto;
     background-position: center;
     background-color: $brand-secondary-strong;
@@ -210,18 +209,14 @@
   }
 }
 
-
-
 @media screen and (max-width: 991px) {
-
 }
 
 @media screen and (max-width: 767px) {
   .form__wrapper {
     grid-template-columns: 1fr;
     padding: 64px 16px;
-    grid-template-areas:
-    "form";
+    grid-template-areas: 'form';
     .intro {
       display: none;
     }
@@ -229,7 +224,6 @@
 }
 
 @media screen and (max-width: 479px) {
-
 }
 
 .formPopup {
@@ -247,10 +241,9 @@
     top: 8px;
   }
 
-  p{
+  p {
     font-size: 1rem;
     color: $brand-primary-strong;
-
   }
 }
 

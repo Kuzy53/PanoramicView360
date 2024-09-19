@@ -1,5 +1,5 @@
-@import "src/scss/variables";
-@import "src/scss/mixin";
+@import 'src/scss/variables';
+@import 'src/scss/mixin';
 //@import url('./');
 
 .content {
@@ -20,11 +20,11 @@
     }
 
     .title {
-      @include h2title
+      @include h2title;
     }
 
     .subtitle {
-      @include subtitle
+      @include subtitle;
     }
   }
 
@@ -74,7 +74,7 @@
             top: 72px;
           }
         }
-        &.animation_bg1{
+        &.animation_bg1 {
           transform: translateY(-64px);
         }
       }
@@ -105,7 +105,7 @@
             top: 9px;
           }
         }
-        &.animation_bg2{
+        &.animation_bg2 {
           transform: translateY(64px);
         }
       }
@@ -149,7 +149,6 @@
       }
     }
   }
-
 }
 
 .progressBar {
@@ -177,17 +176,14 @@
 }
 
 @media screen and (max-width: 991px) {
-
 }
 
 @media screen and (max-width: 767px) {
-.content {
-  padding: 64px 16px 0;
-  margin-bottom: 64px;
-}
-
+  .content {
+    padding: 64px 16px 0;
+    margin-bottom: 64px;
+  }
 }
 
 @media screen and (max-width: 479px) {
-
 }

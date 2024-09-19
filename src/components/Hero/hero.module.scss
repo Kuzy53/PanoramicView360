@@ -1,4 +1,4 @@
-@import "src/scss/variables";
+@import 'src/scss/variables';
 
 .hero_wrapper {
   scroll-behavior: smooth;
@@ -13,8 +13,7 @@
     display: grid;
     gap: 32px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-    "title title check";
+    grid-template-areas: 'title title check';
 
     .content_description {
       max-width: 800px;
@@ -73,7 +72,7 @@
         .app {
           color: $text_icons-onPrimary;
           background: $brand-primary-strong;
-          box-shadow: 0px 12px 24px 0px rgba(255, 241, 85, 0.30);
+          box-shadow: 0px 12px 24px 0px rgba(255, 241, 85, 0.3);
           border: none;
           padding: 0 24px;
         }
@@ -153,8 +152,8 @@
       grid-template-columns: repeat(1, 1fr);
       grid-template-row: repeat(2, auto);
       grid-template-areas:
-      "title"
-      "check";
+        'title'
+        'check';
 
       .content_description {
         max-width: 800px;
@@ -204,7 +203,7 @@
           .app {
             color: $text_icons-onPrimary;
             background: $brand-primary-strong;
-            box-shadow: 0px 12px 24px 0px rgba(255, 241, 85, 0.30);
+            box-shadow: 0px 12px 24px 0px rgba(255, 241, 85, 0.3);
             border: none;
             padding: 0 24px;
           }
@@ -256,7 +255,6 @@
     margin-bottom: 64px;
 
     .content {
-
       .content_description {
         .content_button {
           flex-direction: column;
@@ -275,8 +273,7 @@
           }
         }
       }
-
-  }
+    }
   }
 }
 
@@ -294,8 +291,8 @@
       grid-template-columns: repeat(1, 1fr);
       grid-template-row: repeat(2, auto);
       grid-template-areas:
-      "title"
-      "check";
+        'title'
+        'check';
 
       .content_description {
         max-width: 800px;
@@ -348,7 +345,7 @@
           .app {
             color: $text_icons-onPrimary;
             background: $brand-primary-strong;
-            box-shadow: 0px 12px 24px 0px rgba(255, 241, 85, 0.30);
+            box-shadow: 0px 12px 24px 0px rgba(255, 241, 85, 0.3);
             border: none;
             padding: 0 24px;
           }

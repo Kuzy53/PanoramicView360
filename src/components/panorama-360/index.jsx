@@ -23,10 +23,10 @@ export const Pano = ({ isMovable, initialPanoramaId }) => {
   useEffect(() => {
     const viewer = new PANOLENS.Viewer({
       container: containerRef.current,
-      autoHideInfospot: true, 
+      autoHideInfospot: true,
       controlBar: true,
       controlButtons: ['fullscreen'],
-      autoHideControlBar: false
+      autoHideControlBar: false,
     });
 
     viewer.OrbitControls.minFov = 70;
@@ -37,7 +37,7 @@ export const Pano = ({ isMovable, initialPanoramaId }) => {
     const panoramas = {};
     let initialPanorama;
 
-    config.panoramas.forEach(panoramaConfig => {
+    config.panoramas.forEach((panoramaConfig) => {
       const panorama = new PANOLENS.ImagePanorama(panoramaConfig.image);
       panoramas[panoramaConfig.id] = panorama;
       if (panoramaConfig.id === initialPanoramaId) {
@@ -58,7 +58,7 @@ export const Pano = ({ isMovable, initialPanoramaId }) => {
       });
 
       if (panoramaConfig.notes) {
-        panoramaConfig.notes.forEach(noteConfig => {
+        panoramaConfig.notes.forEach((noteConfig) => {
           const note = document.createElement('div');
           note.setAttribute('style', noteStyle);
 

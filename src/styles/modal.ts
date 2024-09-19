@@ -8,7 +8,8 @@ export const ModalContainer = styled.div`
   transform: translate(-50%, -50%);
   width: 60%;
   background-color: rgb(255, 255, 255);
-  box-shadow: rgb(0 0 0 / 20%) 0 11px 15px -7px, rgb(0 0 0 / 14%) 0px 24px 38px 3px, rgb(0 0 0 / 12%) 0px 9px 46px 8px;
+  box-shadow: rgb(0 0 0 / 20%) 0 11px 15px -7px, rgb(0 0 0 / 14%) 0px 24px 38px 3px,
+    rgb(0 0 0 / 12%) 0px 9px 46px 8px;
   padding: 32px;
   z-index: 10;
   display: flex;

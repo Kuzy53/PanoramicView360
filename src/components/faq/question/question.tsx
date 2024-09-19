@@ -15,10 +15,15 @@ interface QuestionProps {
 }
 
 export const Question: FC<QuestionProps> = ({
-  question, answer, isOpen, toggleOpen, idx, prev,
+  question,
+  answer,
+  isOpen,
+  toggleOpen,
+  idx,
+  prev,
 }) => (
   <div className={`${s.item} ${isOpen ? s.open : ''} ${idx === prev ? s.slideUp : ''}`}>
-    <button className={s.accordionHeader} type="button" onClick={toggleOpen}>
+    <button className={s.accordionHeader} type='button' onClick={toggleOpen}>
       <img alt={isOpen ? 'Closed' : 'Open'} src={isOpen ? Closed : Open} />
       <h3>{question}</h3>
     </button>

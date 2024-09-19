@@ -11,7 +11,7 @@ export const sendMessage = async (message: string) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        chat_id: "CHAT_ID",
+        chat_id: 'CHAT_ID',
         parse_mode: 'html',
         text: message,
       }),

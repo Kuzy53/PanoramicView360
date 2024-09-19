@@ -14,9 +14,7 @@ import s from './faq.module.scss';
 
 import { FAQProps } from './data/types';
 
-export const FAQ: FC<FAQProps> = ({
-  faqData, badge, title, subtitle,
-}) => {
+export const FAQ: FC<FAQProps> = ({ faqData, badge, title, subtitle }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [prevQuestion, setPrevQuestion] = useState(-1);
   const [isOpen, setIsOpen] = useState(false);
@@ -41,13 +39,11 @@ export const FAQ: FC<FAQProps> = ({
   };
 
   return (
-    <section className={s.content} id="FAQ">
+    <section className={s.content} id='FAQ'>
       <div className={s.wrapper}>
         <span className={s.badge}>{badge}</span>
         <h2 className={s.title}>{title}</h2>
-        <p className={s.subtitle}>
-          {subtitle}
-        </p>
+        <p className={s.subtitle}>{subtitle}</p>
       </div>
       <div className={s.faq_container}>
         <div className={s.faq__column}>
@@ -77,53 +73,43 @@ export const FAQ: FC<FAQProps> = ({
           ))}
         </div>
         <div className={isOpen ? `${s.open}` : `${s.more}`}>
-          <button type="button" onClick={() => showMore()}>
+          <button type='button' onClick={() => showMore()}>
             Show more
             <svg
-              fill="none"
-              height="20"
-              viewBox="0 0 21 20"
-              width="21"
-              xmlns="http://www.w3.org/2000/svg"
+              fill='none'
+              height='20'
+              viewBox='0 0 21 20'
+              width='21'
+              xmlns='http://www.w3.org/2000/svg'
             >
               <path
-                d="M5.71423 7.5L10.7142 12.5L15.7142 7.5"
-                stroke="white"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeOpacity="0.9"
-                strokeWidth="1.66667"
+                d='M5.71423 7.5L10.7142 12.5L15.7142 7.5'
+                stroke='white'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeOpacity='0.9'
+                strokeWidth='1.66667'
               />
             </svg>
           </button>
         </div>
       </div>
-      <div className={s.faq_bottom} id="FaqContact">
+      <div className={s.faq_bottom} id='FaqContact'>
         <div className={s.faq_bottom__wrapper}>
           <span className={s.faq_bottom__title}>Остались вопросы?</span>
-          <p className={s.faq_bottom__subtitle}>Вы можете обратиться с вопросами к нашей команде.</p>
+          <p className={s.faq_bottom__subtitle}>
+            Вы можете обратиться с вопросами к нашей команде.
+          </p>
         </div>
         {pathname === '/about' ? (
-          <button
-            className={s.faq_bottom__btn}
-            type="button"
-            onClick={handleOpenPopup}
-          >
+          <button className={s.faq_bottom__btn} type='button' onClick={handleOpenPopup}>
             Contact Us
           </button>
-        )
-          : (
-            <Link
-              smooth
-              spy
-              className={s.faq_bottom__btn}
-              duration={500}
-              offset={-70}
-              to="ContactUs"
-            >
-              Contact Us
-            </Link>
-          )}
+        ) : (
+          <Link smooth spy className={s.faq_bottom__btn} duration={500} offset={-70} to='ContactUs'>
+            Contact Us
+          </Link>
+        )}
 
         {isPopupOpen && <Popup onClose={handleClosePopup} />}
       </div>

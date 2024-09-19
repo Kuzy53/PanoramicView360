@@ -11,7 +11,7 @@ export const Calculator = () => {
   const [stationsValue, setStationsValue] = useState(30);
   const [racksValue, setRacksValue] = useState(50);
 
-  const expenses = (stationsValue * 350) + (racksValue * 35);
+  const expenses = stationsValue * 350 + racksValue * 35;
   const profit = stationsValue * 37;
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>, type: string): void => {
@@ -25,24 +25,29 @@ export const Calculator = () => {
   };
 
   return (
-    <section className={s.conteiner} id="Calculator">
+    <section className={s.conteiner} id='Calculator'>
       <div className={s.wrapper}>
         <div className={s.content}>
           <span className={s.badge}>Profit Calculator</span>
           <h2 className={s.title}>Forecast Your Financial Future!</h2>
-          <p className={s.subtitle}>Get a glimpse of your potential earnings with our detailed calculator. Input your parameters and let the magic happen.</p>
+          <p className={s.subtitle}>
+            Get a glimpse of your potential earnings with our detailed calculator. Input your
+            parameters and let the magic happen.
+          </p>
         </div>
         <div className={s.calc}>
           <div className={s.calc__wrapper}>
             <h3 className={s.calc_title}>Number of stations</h3>
-            <p className={s.calc_description}>In this case, stations with 8 Powerbanks are taken into account.</p>
+            <p className={s.calc_description}>
+              In this case, stations with 8 Powerbanks are taken into account.
+            </p>
             <div className={s.calc_slider}>
               <input
-                max="300"
-                min="10"
-                step="10"
+                max='300'
+                min='10'
+                step='10'
                 style={{ background: getBackgroundStyle(stationsValue, 10, 300) }}
-                type="range"
+                type='range'
                 value={stationsValue}
                 onChange={(event) => handleChange(event, 'stations')}
               />
@@ -77,14 +82,17 @@ export const Calculator = () => {
           </div>
           <div className={s.calc__wrapper}>
             <h3 className={s.calc_title}>Number of racks for the stations</h3>
-            <p className={s.calc_description}>Racks are needed if you want to install the stations on the floor and not on, for example, a table</p>
+            <p className={s.calc_description}>
+              Racks are needed if you want to install the stations on the floor and not on, for
+              example, a table
+            </p>
             <div className={s.calc_slider}>
               <input
-                max="300"
-                min="10"
-                step="10"
+                max='300'
+                min='10'
+                step='10'
                 style={{ background: getBackgroundStyle(racksValue, 10, 300) }}
-                type="range"
+                type='range'
                 value={racksValue}
                 onChange={(event) => handleChange(event, 'racks')}
               />
@@ -121,30 +129,25 @@ export const Calculator = () => {
       </div>
       <div className={s.block__wrapper}>
         <div className={`${s.block} ${s.block1}`}>
-          <img alt="icon operating" loading="lazy" src={operating} />
+          <img alt='icon operating' loading='lazy' src={operating} />
           <h4 className={s.block_title}>Operating margin</h4>
           <div className={s.block_price}>45%</div>
         </div>
         <div className={`${s.block} ${s.block2}`}>
-          <img alt="icon roi" loading="lazy" src={roi} />
+          <img alt='icon roi' loading='lazy' src={roi} />
           <h4 className={s.block_title}>ROI</h4>
           <div className={s.block_price}>11%</div>
         </div>
         <div className={`${s.block} ${s.block3}`}>
-          <img alt="icon expans" loading="lazy" src={expens} />
+          <img alt='icon expans' loading='lazy' src={expens} />
           <h4 className={s.block_title}>One-time expenses</h4>
-          <div className={s.block_price}>
-            {expenses}
-            $
-          </div>
+          <div className={s.block_price}>{expenses}$</div>
         </div>
         <div className={`${s.block} ${s.block4}`}>
-          <img alt="icon profit" loading="lazy" src={profitImg} />
+          <img alt='icon profit' loading='lazy' src={profitImg} />
           <h4 className={s.block_title}>Profit</h4>
           <div className={s.block_price}>
-            {profit}
-            $
-            <span>/month</span>
+            {profit}$<span>/month</span>
           </div>
         </div>
       </div>

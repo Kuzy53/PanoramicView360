@@ -1,5 +1,5 @@
-@import "src/scss/variables";
-@import "src/scss/mixin";
+@import 'src/scss/variables';
+@import 'src/scss/mixin';
 
 .conteiner {
   width: 100%;
@@ -9,7 +9,6 @@
   align-items: center;
   display: flex;
   padding: 96px 32px;
-
 
   .wrapper {
     width: 100%;
@@ -21,7 +20,7 @@
     justify-content: flex-start;
     align-items: center;
     display: flex;
-    box-shadow: 0 8px 8px rgba(16, 24, 40, .03), 0 20px 24px rgba(16, 24, 40, .08);
+    box-shadow: 0 8px 8px rgba(16, 24, 40, 0.03), 0 20px 24px rgba(16, 24, 40, 0.08);
 
     .content {
       width: 100%;
@@ -33,7 +32,7 @@
       display: flex;
 
       .title {
-        color: rgba(0, 0, 0, 0.90);
+        color: rgba(0, 0, 0, 0.9);
         font-size: 2.25rem;
         font-weight: 600;
         letter-spacing: -0.72px;
@@ -41,7 +40,7 @@
       }
 
       .subtitle {
-        color: rgba(0, 0, 0, 0.50);
+        color: rgba(0, 0, 0, 0.5);
         font-size: 1.25rem;
         font-weight: 400;
         line-height: 30px;
@@ -174,7 +173,7 @@
           display: flex;
           width: 100%;
           flex-wrap: nowrap;
-          .btn{
+          .btn {
             object-fit: cover;
             justify-content: center;
             align-items: center;
@@ -183,7 +182,6 @@
               width: 44%;
               flex: 0 1 auto;
               height: auto;
-
             }
             &:last-of-type {
               width: 50%;

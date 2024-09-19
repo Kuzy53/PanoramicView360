@@ -1,5 +1,5 @@
-@import "src/scss/variables";
-@import "src/scss/mixin";
+@import 'src/scss/variables';
+@import 'src/scss/mixin';
 
 .conteiner {
   width: 100vw;
@@ -55,7 +55,8 @@
             border-radius: 12px;
             border: 1px solid $text_icons-Borders;
             background: rgba(255, 255, 255, 0.08);
-            box-shadow: 0px -1px 0px 0px rgba(47, 43, 67, 0.10) inset, 0px 1px 3px 0px rgba(47, 43, 67, 0.10);
+            box-shadow: 0px -1px 0px 0px rgba(47, 43, 67, 0.1) inset,
+              0px 1px 3px 0px rgba(47, 43, 67, 0.1);
             height: 48px;
             color: $text_icons-Secondary;
             font-size: 1rem;
@@ -70,7 +71,8 @@
             height: 48px;
             border-radius: 12px;
             background: $brand-primary-strong;
-            box-shadow: 0px -1px 0px 0px rgba(47, 43, 67, 0.10) inset, 0px 1px 3px 0px rgba(47, 43, 67, 0.10);
+            box-shadow: 0px -1px 0px 0px rgba(47, 43, 67, 0.1) inset,
+              0px 1px 3px 0px rgba(47, 43, 67, 0.1);
             color: var(--text-icons-text-icons-on-primary, #000);
             font-size: 1rem;
             font-weight: 500;
@@ -97,7 +99,7 @@
               padding: 0 16px;
 
               a {
-               text-decoration: none;
+                text-decoration: none;
                 color: $text_icons-Secondary;
                 font-size: 1rem;
                 font-weight: 500;
@@ -133,16 +135,16 @@
       .designer {
         display: flex;
         gap: 8px;
-          a {
-            color: $text_icons-Primary;
-            font-weight: 600;
-            font-size: 1rem;
-            line-height: 24px;
-            letter-spacing: -0.16px;
-            text-decoration: none;
-            display: flex;
-            gap: 8px;
-          }
+        a {
+          color: $text_icons-Primary;
+          font-weight: 600;
+          font-size: 1rem;
+          line-height: 24px;
+          letter-spacing: -0.16px;
+          text-decoration: none;
+          display: flex;
+          gap: 8px;
+        }
       }
     }
   }
@@ -214,7 +216,6 @@
       }
     }
   }
-
 }
 
 @media screen and (max-width: 479px) {
@@ -255,9 +256,8 @@
     top: 8px;
   }
 
-  p{
+  p {
     font-size: 1rem;
     color: $brand-primary-strong;
-
   }
 }

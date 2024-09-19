@@ -1,5 +1,5 @@
-@import "src/scss/variables";
-@import "src/scss/mixin";
+@import 'src/scss/variables';
+@import 'src/scss/mixin';
 
 .content {
   display: flex;
@@ -19,11 +19,11 @@
     }
 
     .title {
-      @include h2title
+      @include h2title;
     }
 
     .subtitle {
-      @include subtitle
+      @include subtitle;
     }
   }
 
@@ -32,8 +32,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1, 1fr);
     grid-column-gap: 32px;
-    grid-template-areas:
-    "card1 card2 card3";
+    grid-template-areas: 'card1 card2 card3';
 
     .card {
       display: flex;
@@ -199,19 +198,17 @@
 
 @media screen and (max-width: 991px) {
   .content {
-
     .wrapper {
-
       .badge {
         @include badge;
       }
 
       .title {
-        @include h2title
+        @include h2title;
       }
 
       .subtitle {
-        @include subtitle
+        @include subtitle;
       }
     }
 
@@ -221,9 +218,9 @@
       grid-template-rows: repeat(3, 1fr);
       gap: 32px;
       grid-template-areas:
-    "card1"
-    "card2"
-    "card3";
+        'card1'
+        'card2'
+        'card3';
 
       .card {
         max-width: 700px;
@@ -243,7 +240,6 @@
         }
 
         .card_title {
-
           span {
           }
 
@@ -269,43 +265,32 @@
 
           .card_description {
             .list__wrapper {
-
               hr {
               }
 
               .list {
-
                 .list_title__wrapper {
-
                   h5 {
-
                   }
 
                   .list_title__fractionally {
-
                   }
                 }
 
                 .list_price__wrapper {
-
                   .list_price__title {
-
                   }
                   .list_price__total {
-
                   }
                 }
 
                 &:first-of-type {
-
                 }
 
                 &:nth-of-type(2) {
-
                 }
 
                 &:last-of-type {
-
                 }
               }
             }
@@ -321,17 +306,16 @@
     margin-bottom: 64px;
     padding: 64px 16px 0;
     .wrapper {
-
       .badge {
         @include badge;
       }
 
       .title {
-        @include h2title
+        @include h2title;
       }
 
       .subtitle {
-        @include subtitle
+        @include subtitle;
       }
     }
 
@@ -342,12 +326,11 @@
       grid-column-gap: 16px;
       grid-row-gap: 16px;
       grid-template-areas:
-    "card1"
-    "card2"
-    "card3";
+        'card1'
+        'card2'
+        'card3';
 
       .card {
-
         .call {
         }
 
@@ -360,7 +343,6 @@
         }
 
         .card_title {
-
           span {
           }
 
@@ -386,43 +368,32 @@
 
           .card_description {
             .list__wrapper {
-
               hr {
               }
 
               .list {
-
                 .list_title__wrapper {
-
                   h5 {
-
                   }
 
                   .list_title__fractionally {
-
                   }
                 }
 
                 .list_price__wrapper {
-
                   .list_price__title {
-
                   }
                   .list_price__total {
-
                   }
                 }
 
                 &:first-of-type {
-
                 }
 
                 &:nth-of-type(2) {
-
                 }
 
                 &:last-of-type {
-
                 }
               }
             }
@@ -449,7 +420,7 @@
       }
 
       .subtitle {
-        @include subtitle(1rem, left, 150%)
+        @include subtitle(1rem, left, 150%);
       }
     }
 
@@ -459,9 +430,9 @@
       grid-template-rows: repeat(3, 1fr);
       gap: 16px;
       grid-template-areas:
-    "card1"
-    "card2"
-    "card3";
+        'card1'
+        'card2'
+        'card3';
 
       .card {
         align-items: flex-start;
@@ -514,43 +485,32 @@
 
           .card_description {
             .list__wrapper {
-
               hr {
               }
 
               .list {
-
                 .list_title__wrapper {
-
                   h5 {
-
                   }
 
                   .list_title__fractionally {
-
                   }
                 }
 
                 .list_price__wrapper {
-
                   .list_price__title {
-
                   }
                   .list_price__total {
-
                   }
                 }
 
                 &:first-of-type {
-
                 }
 
                 &:nth-of-type(2) {
-
                 }
 
                 &:last-of-type {
-
                 }
               }
             }
