@@ -1,0 +1,152 @@
+@import "src/scss/variables";
+
+.item {
+  border-radius: 16px;
+  padding: 31px;
+  border: 1px solid transparent;
+  @media screen and (max-width: 767px) {
+    padding: 15px;
+  }
+
+  .accordionHeader {
+    display: flex;
+    gap: 24px;
+    background: none;
+    border: none;
+    outline: none;
+    white-space: normal;
+    text-align: left;
+
+    h3 {
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 28px;
+      color: $text_icons-Secondary;
+    }
+  }
+}
+
+.item.open {
+  border-color: $text_icons-Borders;
+  background: $bg-secondary;
+  animation: faq 0.5s linear both;
+  @media screen and (max-width: 767px) {
+    animation: faq 0.5s linear both;
+  }
+
+  .accordionHeader {
+    display: flex;
+    gap: 24px;
+
+    h3 {
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 28px;
+      color: $text_icons-Primary;
+      animation: faqTitle 0.5s linear both;
+    }
+  }
+}
+
+
+
+.accordionContent {
+  max-height: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px;
+  color: $text_icons-Secondary;
+  margin: 8px 0 0 48px;
+  opacity: 0;
+}
+
+.item.open .accordionContent {
+  animation: faqContent 0.5s linear both;
+  opacity: 1;
+  max-height: 1000px;
+}
+
+.item.slideUp {
+  animation: faqBack 0.5s linear both;
+  .accordionHeader {
+    h3 {
+      animation: faqTitleBack 0.5s linear both;
+    }
+  }
+}
+
+.item.slideUp .accordionContent {
+  animation: faqContentBack 0.5s linear both;
+  overflow: hidden;
+  max-height: 0;
+}
+
+@keyframes faq {
+  from {
+      border: 1px solid transparent;
+      overflow: hidden;
+      background: transparent;
+    }
+
+  to {
+      border: 1px solid $text_icons-Borders;
+      background: $bg-secondary;
+    }
+}
+
+@keyframes faqBack {
+  from {
+    border: 1px solid $text_icons-Borders;
+    background: $bg-secondary;
+    width: 100%;
+  }
+  to {
+    border: 1px solid transparent;
+    background: transparent;
+    width: 100%;
+  }
+}
+
+@keyframes faqTitle {
+  from {
+    color: $text_icons-Secondary;
+  }
+
+  to {
+    color: $text-icons-Primary;
+  }
+}
+
+@keyframes faqTitleBack {
+  from {
+    color: $text-icons-Primary;
+  }
+  to {
+    color: $text_icons-Secondary;
+  }
+}
+
+@keyframes faqContent {
+  from {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  to {
+    max-height: 1000px;
+    opacity: 1;
+  }
+}
+
+@keyframes faqContentBack {
+  from {
+    max-height: 1000px;
+    opacity: 1;
+  }
+  to {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+}

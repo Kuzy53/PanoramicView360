@@ -1,0 +1,263 @@
+@import "src/scss/variables";
+@import "src/scss/mixin";
+
+.conteiner {
+  width: 100vw;
+  padding: 96px 32px;
+  display: flex;
+  justify-content: center;
+  background: $bg-secondary;
+  margin-top: 96px;
+  .wrapper {
+    width: 1216px;
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+
+    .top {
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+
+      .content {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+
+        .text {
+          max-width: 485px;
+
+          .title {
+            color: $text_icons-Primary;
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 28px;
+            letter-spacing: -0.28px;
+            margin-bottom: 8px;
+          }
+
+          .subtitle {
+            color: $text_icons-Secondary;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: -0.16px;
+          }
+        }
+
+        .subscribe {
+          display: flex;
+          gap: 8px;
+
+          input {
+            padding: 0 16px;
+            width: 370px;
+            border-radius: 12px;
+            border: 1px solid $text_icons-Borders;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0px -1px 0px 0px rgba(47, 43, 67, 0.10) inset, 0px 1px 3px 0px rgba(47, 43, 67, 0.10);
+            height: 48px;
+            color: $text_icons-Secondary;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: -0.16px;
+            font-family: Inter, sans-serif;
+            outline: none;
+          }
+
+          button {
+            height: 48px;
+            border-radius: 12px;
+            background: $brand-primary-strong;
+            box-shadow: 0px -1px 0px 0px rgba(47, 43, 67, 0.10) inset, 0px 1px 3px 0px rgba(47, 43, 67, 0.10);
+            color: var(--text-icons-text-icons-on-primary, #000);
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: -0.16px;
+            padding: 0 16px;
+            border: none;
+          }
+        }
+      }
+
+      .links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        nav {
+          ul {
+            list-style-type: none;
+            display: flex;
+            gap: 8px;
+
+            li {
+              padding: 0 16px;
+
+              a {
+               text-decoration: none;
+                color: $text_icons-Secondary;
+                font-size: 1rem;
+                font-weight: 500;
+                line-height: 24px;
+                letter-spacing: -0.16px;
+              }
+            }
+          }
+        }
+
+        .social {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+
+          a {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      color: $text_icons-Secondary;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: -0.16px;
+
+      .designer {
+        display: flex;
+        gap: 8px;
+          a {
+            color: $text_icons-Primary;
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 24px;
+            letter-spacing: -0.16px;
+            text-decoration: none;
+            display: flex;
+            gap: 8px;
+          }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1216px) {
+  .conteiner {
+    padding: 96px 32px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .conteiner {
+    margin-top: 64px;
+    .wrapper {
+      width: 991px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .conteiner {
+    padding: 64px 16px 96px;
+    .wrapper {
+      align-items: center;
+      gap: 64px;
+      .top {
+        .content {
+          flex-direction: column;
+          gap: 24px;
+          .text {
+            text-align: center;
+          }
+
+          .subscribe {
+            width: 100%;
+
+            input {
+              width: 70%;
+            }
+
+            button {
+              width: 30%;
+            }
+          }
+        }
+
+        .links {
+          flex-direction: column;
+          gap: 48px;
+
+          nav {
+            ul {
+              flex-direction: column;
+              text-align: center;
+
+              li {
+                height: 44px;
+              }
+            }
+          }
+        }
+      }
+
+      .bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 479px) {
+  .conteiner {
+    .wrapper {
+      .top {
+        .content {
+          .subscribe {
+            width: 100%;
+            flex-direction: column;
+
+            input {
+              width: 100%;
+            }
+
+            button {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.formPopup {
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+  width: 300px;
+  height: 80px;
+  background: $bg-secondary;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-radius: 16px;
+  @media screen and (max-width: 767px) {
+    top: 8px;
+  }
+
+  p{
+    font-size: 1rem;
+    color: $brand-primary-strong;
+
+  }
+}

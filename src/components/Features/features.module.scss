@@ -1,0 +1,515 @@
+@import "src/scss/variables";
+@import "src/scss/mixin";
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 96px;
+  padding: 96px 32px 0;
+  align-items: flex-start;
+  @media screen and (max-width: 767px){
+    padding: 64px 16px 0;
+  }
+
+  .wrapper {
+    max-width: 768px;
+    text-align: left;
+    margin-bottom: 64px;
+
+    .badge {
+      @include badge;
+    }
+
+    .title {
+      @include h2title
+    }
+
+    .subtitle {
+      @include subtitle;
+      text-align: left;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    grid-template-areas:
+    "box1 box1 box1 box2 box2 box2 box3 box3 box4 box4 box4 box4"
+    "box1 box1 box1 box5 box5 box7 box7 box7 box7 box6 box6 box6 "
+    "box8 box8 box8 box5 box5 box9 box9 box10 box10 box10 box11 box11"
+    "box12 box12 box12 box12 box13 box13 box13 box10 box10 box10 box11 box11";
+    @media screen and (max-width: 991px){
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      gap: 16px 16px;
+      grid-template-areas:
+      "box1 box1 box1 box8 box8 box8 box2 box2 box2 box2"
+      "box1 box1 box1 box7 box7 box7 box7 box7 box11 box11"
+      "box5 box5 box4 box4 box4 box4 box3 box3 box11 box11"
+      "box5 box5 box6 box6 box6 box9 box9 box10 box10 box10"
+      "box12 box12 box12 box12 box13 box13 box13 box10 box10 box10";
+     @media screen and (max-width: 767px){
+       grid-template-columns: repeat(2, 1fr);
+       grid-template-rows: 367px minmax(auto, max-content) 238px minmax(auto, max-content) minmax(234px, max-content) 121px 255px 142px minmax(auto, max-content);
+       gap: 12px 12px;
+       grid-template-areas:
+    "box1 box1"
+    "box2 box8"
+    "box3 box3"
+    "box4 box4"
+    "box9 box13"
+    "box7 box7"
+    "box5 box5"
+    "box12 box12"
+    "box10 box11"
+     }
+    }
+
+    .gridBlock {
+      @include gridBlock;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      max-height: 492px;
+      @media screen and (max-width: 1100px) {
+        max-height: fit-content;
+      }
+      @media screen and (max-width: 991px) {
+        max-height: 492px;
+      }
+      @media screen and (max-width: 871px) {
+        max-height: fit-content;
+      }
+
+      .darken {
+        position: absolute;
+        height: 32px;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(33, 33, 33, 0.00) 0%, #212121 100%);
+        bottom: 0;
+      }
+
+      .textWrapper {
+        padding: 24px 24px 0 24px;
+        @media screen and (max-width: 767px){
+          padding: 16px 16px 0 16px;
+        }
+      }
+
+      .gridBadge {
+        @include BadgeYellow
+      }
+
+      .title {
+        @include h3title;
+        @media screen and (max-width: 767px){
+          @include h3title(1.125rem)
+        }
+      }
+
+      .description {
+        @include description;
+        @media screen and (max-width: 767px){
+          @include description(0.875rem)
+        }
+      }
+
+      .imgWrapper {
+        height: 200px;
+        position: relative;
+        @media screen and (max-width: 767px) {
+          margin: 0 auto;
+        }
+        @media screen and (max-width: 479px){
+          height: 186px;
+        }
+
+        img {
+          margin: -51px 0 0px -62px;
+          opacity: 0.9;
+          @media screen and (max-width: 1216px) {
+            margin: -51px 0 0px -80px;
+          }
+          @media screen and (max-width: 1100px) {
+            margin: -51px 0 0px -100px;
+          }
+          @media screen and (max-width: 767px){
+            margin: -51px 0 0 0;
+          }
+          @media screen and (max-width: 479px){
+            margin: -51px 0 0 -70px;
+          }
+        }
+      }
+
+
+    }
+
+    .gridBlockText {
+      display: flex;
+      align-content: space-between;
+      padding: 22px;
+      @media screen and (max-width: 1100px) {
+        padding: 16px;
+      }
+
+      .title {
+        @include h3titleMini;
+        margin-bottom: 8px;
+        @media screen and (max-width: 767px){
+          @include h3titleMini(1rem);
+        }
+      }
+    }
+
+    .box1 {
+      grid-area: box1;
+      padding-bottom: 0;
+
+      img {
+        max-width: 363px;
+      }
+
+      .title {
+        margin-bottom: 8px;
+        margin-top: 12px;
+      }
+    }
+    .box2 {
+      grid-area: box2;
+
+    }
+    .box3 {
+      grid-area: box3;
+      position: relative;
+      background-color: $brand-primary-subtle;
+      @media screen and (max-width: 767px){
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        position: absolute;
+        max-width: 204px;
+        top: 24px;
+        left: 24px;
+        @media screen and (max-width: 767px){
+          top: 16px;
+          left: auto;
+        }
+      }
+    }
+    .box4 {
+      grid-area: box4;
+      display: flex;
+      gap: 16px;
+      padding: 24px 0 0 24px;
+      position: relative;
+      @media screen and (max-width: 767px){
+        justify-content: space-between;
+      }
+
+      .gridBlockText {
+        flex-direction: column;
+        padding: 0;
+        width: 175px;
+        justify-content: space-between;
+        height: 100%;
+        padding-bottom: 24px;
+        @media screen and (max-width: 767px){
+          right: 0;
+          width: fit-content;
+          max-width: 35%;
+          padding-bottom: 16px;
+        }
+        @media screen and (max-width: 479px){
+          max-width: 50%;
+        }
+      }
+
+      .title {
+        @include h3title;
+        @media screen and (max-width: 767px){
+          @include h3title(1rem);
+        }
+      }
+
+      img {
+        position: absolute;
+        max-width: 331px;
+        left: 213px;
+        @media screen and (max-width: 767px){
+          right: 16px;
+          left: auto;
+        }
+        @media screen and (max-width: 600px){
+          right: -100px;
+        }
+        @media screen and (max-width: 479px){
+          right: -200px;
+        }
+        @media screen and (max-width: 400px){
+          right: -200px;
+        }
+      }
+    }
+    .box5 {
+      grid-area: box5;
+      background-color: $brand-secondary-subtle;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 0 24px;
+      justify-content: center;
+      @media screen and (max-width: 1100px) {
+        padding: 16px;
+      }
+      @media screen and (max-width: 767px) {
+        flex-direction: row-reverse;
+      }
+
+      img {
+        @media screen and (max-width: 767px) {
+          height: 350px;
+
+          &:first-of-type {
+            margin-top: -126px;
+          }
+        }
+        @media screen and (max-width: 470px) {
+          height: 250px;
+          &:first-of-type {
+            margin-top: -26px;
+          }
+        }
+      }
+    }
+    .box6 {
+      grid-area: box6;
+      @media screen and (max-width: 767px){
+        display: none;
+      }
+    }
+    .box7 {
+      grid-area: box7;
+      display: flex;
+      gap: 16px;
+      padding: 24px 24px 0 0;
+      position: relative;
+      @media screen and (max-width: 767px){
+        padding: 16px;
+      }
+
+      .gridBlockText {
+        flex-direction: column;
+        padding: 0;
+        width: 175px;
+        justify-content: space-between;
+        height: 100%;
+        padding-bottom: 24px;
+        align-self: flex-end;
+      }
+
+      .title {
+        @include h3title;
+        @media screen and (max-width: 767px){
+          @include h3title(1rem);
+        }
+      }
+
+      img {
+        position: absolute;
+        max-width: 266px;
+        left: -94px;
+        @media screen and (max-width: 1216px) {
+          left: -150px;
+        }
+        @media screen and (max-width: 767px) {
+          max-width: 166px;
+          left: 16px;
+        }
+        @media screen and (max-width: 550px) {
+          left: -50px;
+        }
+        @media screen and (max-width: 479px) {
+          left: -50px;
+        }
+        @media screen and (max-width: 420px) {
+          left: -70px;
+        }
+      }
+    }
+    .box8 { grid-area: box8; }
+    .box9 {
+      grid-area: box9;
+      position: relative;
+      @media screen and (max-width: 767px){
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+
+      .gridBlockTextwrapper {
+        padding: 24px 24px 0 24px;
+        @media screen and (max-width: 767px){
+          padding: 16px;
+        }
+      }
+
+      .title {
+        margin-top: 8px;
+        @include h3titleMini;
+        @media screen and (max-width: 767px){
+          @include h3titleMini(1rem);
+        }
+      }
+
+      img {
+        max-width: 190px;
+        position: absolute;
+        bottom: -30px;
+        @media screen and (max-width: 1216px) {
+          max-width: 150px;
+          bottom: -30px;
+        }
+        @media screen and (max-width: 767px){
+          top: 0;
+          bottom: auto;
+        }
+      }
+    }
+    .box10 {
+      grid-area: box10;
+      padding-bottom: 0;
+      position: relative;
+
+      .imgWrapper {
+        height: 254px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 491px){
+          height: 186px;
+        }
+
+        img {
+          max-width: 254px;
+          margin: 0 0 0 0;
+          opacity: 0.8;
+          margin-bottom: -18px;
+          @media screen and (max-width: 491px){
+            max-width: 186px;
+          }
+          @media screen and (max-width: 479px){
+            max-width: 186px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            bottom: -18px;
+          }
+        }
+      }
+
+      .title {
+        margin-bottom: 8px;
+        margin-top: 12px;
+      }
+    }
+    .box11 {
+      grid-area: box11;
+      background-color: $brand-primary-subtle;
+      padding: 24px 24px 0 24px;
+      @media screen and (max-width: 1100px) {
+        display: flex;
+        justify-content: center;
+        padding: 16px;
+      }
+      @media screen and (max-width: 767px) {
+        align-items: center;
+      }
+
+      img {
+        @media screen and (max-width: 767px) {
+          max-height: 406px;
+        }
+      }
+    }
+    .box12 {
+      grid-area: box12;
+      display: flex;
+      gap: 16px;
+      padding: 24px 0 0 24px;
+      position: relative;
+      @media screen and (max-width: 767px){
+        padding: 16px 0 16px 16px;
+      }
+
+      .gridBlockText {
+        flex-direction: column;
+        padding: 0;
+        width: 175px;
+        justify-content: space-between;
+        height: 100%;
+        padding-bottom: 24px;
+        @media screen and (max-width: 767px){
+          padding-bottom: 16px;
+          width: 50%;
+        }
+        @media screen and (max-width: 491px){
+          padding-bottom: 16px;
+          width: 70%;
+        }
+      }
+
+      .title {
+        @include h3title;
+        @media screen and (max-width: 767px){
+          @include h3title(1rem);
+        }
+      }
+
+      img {
+        position: absolute;
+        max-width: 227px;
+        left: 240px;
+        @media screen and (max-width: 1216px) {
+          left: 200px;
+        }
+        @media screen and (max-width: 767px){
+          left: auto;
+          right: 16px;
+          max-width: 139px;
+        }
+        @media screen and (max-width: 491px){
+          right: -50px;
+        }
+      }
+    }
+    .box13 { grid-area: box13; }
+  }
+}
+
+@media screen and (max-width: 1216px) {
+
+}
+
+@media screen and (max-width: 991px) {
+
+}
+
+@media screen and (max-width: 767px) {
+  .content {
+    .grid {
+
+    }
+  }
+
+}
+
+@media screen and (max-width: 479px) {
+
+}

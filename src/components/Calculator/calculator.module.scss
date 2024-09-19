@@ -1,0 +1,200 @@
+@import "src/scss/variables";
+@import "src/scss/mixin";
+
+
+.conteiner {
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+  padding: 96px 32px;
+  @media screen and (max-width: 991px) {
+    flex-direction: column;
+    gap: 48px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 64px 16px;
+  }
+
+  .wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    .content {
+      text-align: left;
+      margin-bottom: 48px;
+
+      .badge {
+        @include badge;
+      }
+
+      .title {
+        @include h2title;
+      }
+
+      .subtitle {
+        @include description;
+      }
+    }
+
+    .calc {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      @media screen and (max-width: 991px) {
+        flex-direction: row;
+      }
+      @media screen and (max-width: 479px) {
+        flex-direction: column;
+      }
+      .calc__wrapper {
+        @media screen and (max-width: 991px) {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        .calc_title {
+          @include calcTitle;
+          margin-bottom: 8px;
+        }
+
+        .calc_description {
+          color: $text_icons-Secondary;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 150%;
+          margin-bottom: 24px;
+        }
+
+        .calc_slider {
+          width: 100%;
+          input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+            background: $text_icons-Borders;
+            outline: none;
+          }
+
+          input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 12px;
+            background: $bg-secondary;
+            border: 1.5px solid $brand-primary-strong;
+            cursor: pointer;
+          }
+
+          input[type="range"]::-webkit-slider-runnable-track {
+            background-color: transparent;
+          }
+
+          input[type="range"]::-moz-range-track {
+            background-color: transparent;
+          }
+
+          input[type="range"]::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 12px;
+            background: $bg-secondary;
+            border: 1.5px solid $brand-primary-strong;
+            cursor: pointer;
+          }
+
+          input[type="range"]::-ms-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 12px;
+            background: $bg-secondary;
+            border: 1.5px solid $brand-primary-strong;
+            cursor: pointer;
+          }
+
+          input[type="range"]::-ms-track {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .block__wrapper{
+    display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-auto-columns: 1fr;
+      gap: 16px 16px;
+    width: 100%;
+      grid-template-areas:
+    "b1 b2"
+    "b3 b4";
+    @media screen and (max-width: 479px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      gap: 12px 12px;
+      grid-template-areas:
+    "b1"
+    "b2"
+    "b3"
+    "b4";
+    }
+
+
+    .block {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      background: $bg-secondary;
+      box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px;
+      @media screen and (max-width: 479px) {
+        align-items: center;
+        gap: 24px;
+      }
+
+      img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .block_title {
+        @include calcTitle;
+      }
+
+      .block_price {
+        color: $text_icons-Primary;
+        font-size: 2.25rem;
+        font-weight: 600;
+        line-height: 44px;
+        letter-spacing: -0.72px;
+
+        span {
+          color: $text_icons-Secondary;
+          font-size: 1.5rem;
+          font-weight: 400;
+          letter-spacing: -0.48px;
+        }
+      }
+    }
+
+    .block1 { grid-area: b2; }
+
+    .block2 { grid-area: b1; }
+
+    .block3 { grid-area: b3; }
+
+    .block4 { grid-area: b4; }
+
+  }
+
+}

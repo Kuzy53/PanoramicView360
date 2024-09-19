@@ -1,0 +1,400 @@
+@import "src/scss/variables";
+
+.hero_wrapper {
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding: 128px 32px 0;
+  margin-bottom: 96px;
+  width: 100%;
+
+  .content {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "title title check";
+
+    .content_description {
+      max-width: 800px;
+      grid-area: title;
+
+      h1 {
+        font-size: 4rem;
+        color: $text_icons-Primary;
+        margin-bottom: 24px;
+        font-weight: 600;
+        line-height: 110%;
+        letter-spacing: -3.2px;
+      }
+
+      .subtitle {
+        color: $text_icons-Secondary;
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 160%;
+        margin-bottom: 48px;
+      }
+
+      .content_button {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        button {
+          font-size: 1.125rem;
+          font-weight: 600;
+          line-height: 28px;
+          border-radius: 8px;
+          height: 56px;
+        }
+
+        a {
+          font-size: 1.125rem;
+          font-weight: 600;
+          line-height: 28px;
+          border-radius: 8px;
+          height: 56px;
+          text-decoration: none;
+        }
+
+        .partner {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 0 16px;
+          border: 2px solid $text_icons-Borders;
+          background: $bg-secondary;
+          box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+          color: $text_icons-Primary;
+        }
+
+        .app {
+          color: $text_icons-onPrimary;
+          background: $brand-primary-strong;
+          box-shadow: 0px 12px 24px 0px rgba(255, 241, 85, 0.30);
+          border: none;
+          padding: 0 24px;
+        }
+
+        p {
+          max-width: 189px;
+          font-size: 1rem;
+          font-weight: 400;
+          color: $text_icons-Secondary;
+        }
+      }
+    }
+    .checkItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 16px 24px;
+      grid-area: check;
+
+      ul {
+        display: flex;
+        list-style-type: none;
+        gap: 20px;
+        flex-direction: column;
+
+        li {
+          display: flex;
+          align-items: flex-start;
+          gap: 12px;
+          font-size: 1.125rem;
+          font-weight: 400;
+          color: $text_icons-Secondary;
+          line-height: 140%;
+
+          span {
+            margin-top: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.intro_wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  .iframeLoaded {
+    width: 100%;
+    border-radius: 32px;
+  }
+  .intro {
+    border-radius: 32px;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .hero_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    padding-top: 128px;
+    margin-bottom: 96px;
+
+    .content {
+      display: grid;
+      gap: 32px;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-row: repeat(2, auto);
+      grid-template-areas:
+      "title"
+      "check";
+
+      .content_description {
+        max-width: 800px;
+        grid-area: title;
+
+        h1 {
+          font-size: 3rem;
+          color: $text_icons-Primary;
+          margin-bottom: 24px;
+          font-weight: 600;
+          line-height: 110%;
+          letter-spacing: -3.2px;
+        }
+
+        .subtitle {
+          color: $text_icons-Secondary;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 160%;
+          margin-bottom: 48px;
+        }
+
+        .content_button {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+
+          button {
+            font-size: 1.125rem;
+            font-weight: 600;
+            line-height: 28px;
+            border-radius: 8px;
+            height: 56px;
+          }
+
+          .partner {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0 16px;
+            border: 2px solid $text_icons-Borders;
+            background: $bg-secondary;
+            box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+            color: $text_icons-Primary;
+          }
+
+          .app {
+            color: $text_icons-onPrimary;
+            background: $brand-primary-strong;
+            box-shadow: 0px 12px 24px 0px rgba(255, 241, 85, 0.30);
+            border: none;
+            padding: 0 24px;
+          }
+
+          p {
+            max-width: 189px;
+            font-size: 1rem;
+            font-weight: 400;
+            color: $text_icons-Secondary;
+          }
+        }
+      }
+      .checkItem {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 0 16px 24px;
+        grid-area: check;
+
+        ul {
+          display: flex;
+          list-style-type: none;
+          gap: 20px;
+          flex-direction: column;
+
+          li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 1.125rem;
+            font-weight: 400;
+            color: $text_icons-Secondary;
+            line-height: 140%;
+
+            span {
+              margin-top: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero_wrapper {
+    padding: 64px 16px 0;
+    margin-bottom: 64px;
+
+    .content {
+
+      .content_description {
+        .content_button {
+          flex-direction: column;
+          width: 100%;
+
+          .partner {
+            width: 100%;
+            justify-content: center;
+          }
+
+          .app {
+            width: 100%;
+          }
+          p {
+            max-width: 100%;
+          }
+        }
+      }
+
+  }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .hero_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-top: 112px;
+    margin-bottom: 64px;
+
+    .content {
+      display: grid;
+      gap: 32px;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-row: repeat(2, auto);
+      grid-template-areas:
+      "title"
+      "check";
+
+      .content_description {
+        max-width: 800px;
+        grid-area: title;
+
+        h1 {
+          font-size: 2.25rem;
+          color: $text_icons-Primary;
+          margin-bottom: 24px;
+          font-weight: 600;
+          line-height: 110%;
+          letter-spacing: -3.2px;
+        }
+
+        .subtitle {
+          color: $text_icons-Secondary;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 140%;
+          margin-bottom: 32px;
+        }
+
+        .content_button {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 12px;
+
+          button {
+            font-size: 1.125rem;
+            font-weight: 600;
+            line-height: 28px;
+            border-radius: 8px;
+            height: 56px;
+            width: 100%;
+          }
+
+          .partner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 0 16px;
+            border: 2px solid $text_icons-Borders;
+            background: $bg-secondary;
+            box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+            color: $text_icons-Primary;
+          }
+
+          .app {
+            color: $text_icons-onPrimary;
+            background: $brand-primary-strong;
+            box-shadow: 0px 12px 24px 0px rgba(255, 241, 85, 0.30);
+            border: none;
+            padding: 0 24px;
+          }
+
+          p {
+            max-width: 100%;
+            font-size: 1rem;
+            font-weight: 400;
+            color: $text_icons-Secondary;
+          }
+        }
+      }
+      .checkItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 16px 24px;
+        grid-area: check;
+
+        ul {
+          display: flex;
+          list-style-type: none;
+          gap: 20px;
+          flex-direction: column;
+
+          li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 1rem;
+            font-weight: 400;
+            color: $text_icons-Secondary;
+            line-height: 140%;
+
+            img {
+              width: 28px;
+              height: 28px;
+            }
+
+            span {
+              margin-top: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

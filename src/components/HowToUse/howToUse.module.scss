@@ -1,0 +1,193 @@
+@import "src/scss/variables";
+@import "src/scss/mixin";
+//@import url('./');
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 96px;
+  padding: 96px 32px 0;
+  width: 100%;
+
+  .wrapper {
+    max-width: 768px;
+    text-align: center;
+    margin-bottom: 64px;
+
+    .badge {
+      @include badge;
+    }
+
+    .title {
+      @include h2title
+    }
+
+    .subtitle {
+      @include subtitle
+    }
+  }
+
+  .animation_container {
+    width: 100%;
+
+    .animation_img {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      overflow: hidden;
+      height: 512px;
+      @media screen and (max-width: 767px) {
+        height: 416px;
+      }
+
+      .img_wrapper__left {
+        position: relative;
+        transition: all 0.8s cubic-bezier(0, 0, 0.1, 1.01);
+
+        .slide1 {
+          margin-right: -17px;
+          margin-top: 64px;
+          z-index: 1;
+          width: 314px;
+          @media screen and (max-width: 767px) {
+            height: 406px;
+            width: auto;
+            margin-right: -55px;
+            z-index: 10;
+            position: relative;
+          }
+        }
+
+        .slide1bg1 {
+          width: 282px;
+          position: absolute;
+          left: 16px;
+          top: 77px;
+          z-index: -10;
+          transition: all 2s ease-in-out;
+          @media screen and (max-width: 767px) {
+            height: 390px;
+            width: auto;
+            left: 10px;
+            z-index: 5;
+            top: 72px;
+          }
+        }
+        &.animation_bg1{
+          transform: translateY(-64px);
+        }
+      }
+
+      .img_wrapper__right {
+        position: relative;
+        transition: all 0.8s cubic-bezier(0, 0, 0.1, 1.01);
+        z-index: -2;
+
+        .slide2 {
+          width: 314px;
+          @media screen and (max-width: 767px) {
+            height: 406px;
+            width: auto;
+          }
+        }
+
+        .slide1bg2 {
+          width: 282px;
+          position: absolute;
+          left: 16px;
+          top: 14px;
+          z-index: -10;
+          @media screen and (max-width: 767px) {
+            height: 390px;
+            width: auto;
+            left: 8px;
+            top: 9px;
+          }
+        }
+        &.animation_bg2{
+          transform: translateY(64px);
+        }
+      }
+    }
+
+    .animation_description {
+      display: flex;
+      z-index: 3;
+      justify-content: space-between;
+
+      @media (max-width: 767px) {
+        .slider-buttons-container {
+          display: block;
+        }
+      }
+      .animation_description__wrapper {
+        padding: 20px 16px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: none;
+        background: transparent;
+        white-space: normal;
+
+        .animation_description__title {
+          color: $text_icons-Primary;
+          text-align: center;
+          font-size: 1.25rem;
+          font-weight: 600;
+          line-height: 30px;
+          margin-bottom: 8px;
+        }
+
+        .animation_description__description {
+          color: $text_icons-Secondary;
+          text-align: center;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
+}
+
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background: $text_icons-Borders;
+  position: relative;
+
+  .progress {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 4px;
+
+    .progressLine__wrapper {
+      width: 100%;
+    }
+
+    .progressLine {
+      height: 4px;
+      width: 100%;
+      background: yellow;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+
+}
+
+@media screen and (max-width: 767px) {
+.content {
+  padding: 64px 16px 0;
+  margin-bottom: 64px;
+}
+
+}
+
+@media screen and (max-width: 479px) {
+
+}

@@ -1,0 +1,562 @@
+@import "src/scss/variables";
+@import "src/scss/mixin";
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 96px;
+  padding: 96px 32px 0;
+  width: 100%;
+
+  .wrapper {
+    max-width: 768px;
+    text-align: center;
+    margin-bottom: 64px;
+
+    .badge {
+      @include badge;
+    }
+
+    .title {
+      @include h2title
+    }
+
+    .subtitle {
+      @include subtitle
+    }
+  }
+
+  .cardWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 32px;
+    grid-template-areas:
+    "card1 card2 card3";
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 384px;
+      padding: 32px;
+      border-radius: 16px;
+      border: 1px solid $text_icons-Borders;
+      background: $bg-secondary;
+      box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+      position: relative;
+      gap: 20px;
+
+      .call {
+        position: absolute;
+        right: -64px;
+        top: -44px;
+      }
+
+      .card1 {
+        grid-area: card1;
+      }
+
+      .card2 {
+        grid-area: card2;
+      }
+
+      .card_title {
+        text-align: center;
+        span {
+          font-size: 3rem;
+          font-weight: 600;
+          line-height: 60px; /* 125% */
+          letter-spacing: -0.96px;
+          color: $text_icons-Primary;
+        }
+
+        h3 {
+          @include h3titleMini;
+          line-height: 30px;
+        }
+      }
+
+      .card_description {
+        width: 100%;
+        @include description;
+        line-height: 24px;
+        padding: 32px 0 40px 0;
+      }
+
+      .card_button {
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid $brand-primary-strong;
+        background: $brand-primary-strong;
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        padding: 12px;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 24px;
+        color: $text_icons-onPrimary;
+      }
+
+      &.card3 {
+        grid-area: card3;
+
+        .card_title {
+          h3 {
+            text-align: center;
+            color: $text_icons-Primary;
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.64px;
+          }
+        }
+
+        .card_description {
+          .list__wrapper {
+            list-style-type: none;
+            width: 100%;
+
+            hr {
+              height: 2px;
+              width: 100%;
+              border-radius: 4px;
+              border: none;
+              background-color: $text_icons-Borders;
+            }
+
+            .list {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+
+              .list_title__wrapper {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                align-items: center;
+                h5 {
+                  color: $text-icons-Secondary;
+                  font-size: 0.75rem;
+                  font-weight: 600;
+                  letter-spacing: 1.2px;
+                  text-transform: uppercase;
+                }
+
+                .list_title__fractionally {
+                  color: $text_icons-Primary;
+                  font-size: 1rem;
+                  font-weight: 600;
+                  letter-spacing: -0.41px;
+                }
+              }
+
+              .list_price__wrapper {
+                display: flex;
+                justify-content: space-between;
+                text-align: right;
+                align-items: center;
+                width: 100%;
+                margin-top: -4px;
+                .list_price__title {
+                  color: $text_icons-Primary;
+                  font-size: 1rem;
+                  font-weight: 600;
+                  letter-spacing: -0.41px;
+                }
+                .list_price__total {
+                  color: $text_icons-Secondary;
+                  font-size: 0.75rem;
+                  font-weight: 400;
+                  letter-spacing: -0.08px;
+                }
+              }
+
+              &:first-of-type {
+                margin-bottom: 8px;
+              }
+
+              &:nth-of-type(2) {
+                margin: 8px 0;
+              }
+
+              &:last-of-type {
+                margin-top: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.Cays {
+  max-width: 300px;
+  max-height: 400px;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 991px) {
+  .content {
+
+    .wrapper {
+
+      .badge {
+        @include badge;
+      }
+
+      .title {
+        @include h2title
+      }
+
+      .subtitle {
+        @include subtitle
+      }
+    }
+
+    .cardWrapper {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 32px;
+      grid-template-areas:
+    "card1"
+    "card2"
+    "card3";
+
+      .card {
+        max-width: 700px;
+
+        .call {
+          display: block;
+          position: absolute;
+          right: 0;
+          top: -25px;
+        }
+        .card1 {
+          grid-area: card1;
+        }
+
+        .card2 {
+          grid-area: card2;
+        }
+
+        .card_title {
+
+          span {
+          }
+
+          h3 {
+            @include h3titleMini;
+          }
+        }
+
+        .card_description {
+          @include description;
+        }
+
+        .card_button {
+        }
+
+        &.card3 {
+          grid-area: card3;
+
+          .card_title {
+            h3 {
+            }
+          }
+
+          .card_description {
+            .list__wrapper {
+
+              hr {
+              }
+
+              .list {
+
+                .list_title__wrapper {
+
+                  h5 {
+
+                  }
+
+                  .list_title__fractionally {
+
+                  }
+                }
+
+                .list_price__wrapper {
+
+                  .list_price__title {
+
+                  }
+                  .list_price__total {
+
+                  }
+                }
+
+                &:first-of-type {
+
+                }
+
+                &:nth-of-type(2) {
+
+                }
+
+                &:last-of-type {
+
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content {
+    margin-bottom: 64px;
+    padding: 64px 16px 0;
+    .wrapper {
+
+      .badge {
+        @include badge;
+      }
+
+      .title {
+        @include h2title
+      }
+
+      .subtitle {
+        @include subtitle
+      }
+    }
+
+    .cardWrapper {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: 16px;
+      grid-row-gap: 16px;
+      grid-template-areas:
+    "card1"
+    "card2"
+    "card3";
+
+      .card {
+
+        .call {
+        }
+
+        .card1 {
+          grid-area: card1;
+        }
+
+        .card2 {
+          grid-area: card2;
+        }
+
+        .card_title {
+
+          span {
+          }
+
+          h3 {
+            @include h3titleMini;
+          }
+        }
+
+        .card_description {
+          @include description;
+        }
+
+        .card_button {
+        }
+
+        &.card3 {
+          grid-area: card3;
+
+          .card_title {
+            h3 {
+            }
+          }
+
+          .card_description {
+            .list__wrapper {
+
+              hr {
+              }
+
+              .list {
+
+                .list_title__wrapper {
+
+                  h5 {
+
+                  }
+
+                  .list_title__fractionally {
+
+                  }
+                }
+
+                .list_price__wrapper {
+
+                  .list_price__title {
+
+                  }
+                  .list_price__total {
+
+                  }
+                }
+
+                &:first-of-type {
+
+                }
+
+                &:nth-of-type(2) {
+
+                }
+
+                &:last-of-type {
+
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .content {
+    margin-bottom: 64px;
+    padding-top: 64px;
+    .wrapper {
+      text-align: left;
+
+      .badge {
+        @include badge(4px 10px);
+      }
+
+      .title {
+        @include h2title(1.875rem, 16px 0 16px);
+      }
+
+      .subtitle {
+        @include subtitle(1rem, left, 150%)
+      }
+    }
+
+    .cardWrapper {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 16px;
+      grid-template-areas:
+    "card1"
+    "card2"
+    "card3";
+
+      .card {
+        align-items: flex-start;
+        padding: 16px;
+
+        .call {
+          display: block;
+          position: absolute;
+          top: -24px;
+          right: 0;
+        }
+
+        .card1 {
+          grid-area: card1;
+        }
+
+        .card2 {
+          grid-area: card2;
+        }
+
+        .card_title {
+          text-align: left;
+
+          span {
+            font-size: 2.5rem;
+            letter-spacing: -0.8px;
+          }
+
+          h3 {
+            @include h3titleMini;
+          }
+        }
+
+        .card_description {
+          @include description(0.875rem, 24px);
+        }
+
+        .card_button {
+          width: 100%;
+        }
+
+        &.card3 {
+          grid-area: card3;
+
+          .card_title {
+            h3 {
+              text-align: left;
+            }
+          }
+
+          .card_description {
+            .list__wrapper {
+
+              hr {
+              }
+
+              .list {
+
+                .list_title__wrapper {
+
+                  h5 {
+
+                  }
+
+                  .list_title__fractionally {
+
+                  }
+                }
+
+                .list_price__wrapper {
+
+                  .list_price__title {
+
+                  }
+                  .list_price__total {
+
+                  }
+                }
+
+                &:first-of-type {
+
+                }
+
+                &:nth-of-type(2) {
+
+                }
+
+                &:last-of-type {
+
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

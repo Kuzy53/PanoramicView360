@@ -1,0 +1,493 @@
+@import "src/scss/variables";
+
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  background: $bg-primary-blured;
+  backdrop-filter: blur(40px);
+  z-index: 10;
+  border-radius: 0 0 32px 32px;
+  padding: 0 32px;
+
+  .wrapper {
+    max-width: 1216px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+  }
+
+  .logo {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+
+    .logoBig {
+      width: 70px;
+
+    }
+
+    .logoMini {
+      display: none;
+    }
+  }
+
+  .navigation_mobile {
+    display: none;
+  }
+
+  .navigation ul {
+    display: flex;
+    gap: 8px;
+    list-style-type: none;
+    align-items: center;
+
+    li {
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+
+      &:hover {
+        margin-bottom: -2px;
+        border-radius: 8px 8px 0 0;
+        border-bottom: 2px solid $brand-primary-subtle;
+      }
+
+      &:active {
+        border-radius: 8px 8px 0 0;
+        border-bottom: 2px solid $brand-primary-subtle;
+        background: $bg-evenHigher;
+      }
+
+      &:last-of-type:hover {
+        border: none;
+        margin-bottom: 0;
+      }
+
+      &:last-of-type:active {
+        border: none;
+        background: none;
+      }
+
+      .link {
+        display: flex;
+        align-items: center;
+        height: 44px;
+        color: $text_icons-Primary;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+    }
+
+  }
+
+  button {
+    height: 40px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    color: $text_icons-Primary;
+  }
+
+  .dropdown_btn_wrapper {
+    position: relative;
+
+    .dropdown_btn {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding-left: 12px;
+
+      .chevronDown {
+        position: relative;
+        transition: all 300ms ease-in-out;
+      }
+    }
+
+    .dropdown_wrapper {
+      display: none;
+      position: absolute;
+      width: 336px;
+      padding: 12px;
+      border: 2px solid $text_icons-Borders;
+      border-radius: 8px;
+      background: $bg-primary;
+      top: 40px;
+
+      .dropdown {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .dropdown_link {
+          display: flex;
+          gap: 16px;
+          text-decoration: none;
+          align-items: flex-start;
+          padding: 12px;
+          white-space: normal;
+
+          div {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            .dropdown_title {
+              font-size: 1rem;
+              font-weight: 600;
+              line-height: 24px;
+              color: $text_icons-Primary;
+              text-decoration: none;
+            }
+            .dropdown_description {
+              font-size: 0.875rem;
+              font-weight: 400;
+              line-height: 20px;
+              color: $text_icons-Secondary;
+            }
+          }
+        }
+      }
+    }
+
+    &:hover .dropdown_wrapper {
+      display: block;
+    }
+
+    &:hover .chevronDown {
+      z-index: 10;
+      transform: rotateX(180deg);
+    }
+  }
+
+
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    button {
+      padding: 0 16px;
+      box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+      border-radius: 8px;
+    }
+
+    .actions_contact {
+      border: 2px solid $text_icons-Borders;
+      color: $text_icons-Secondary;
+      transition: all 300ms ease;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      padding: 0 16px;
+      height: 40px;
+      box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+      border-radius: 8px;
+      text-decoration: none;
+      align-items: center;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        z-index: -2;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: $text_icons-Borders;
+        transition: all 300ms ease;
+        border-radius: 5px;
+        z-index: -1;
+      }
+      &:hover {
+        color: $text_icons-Primary;
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+
+    .actions_app {
+      background: $brand-primary-subtle;
+      color: $brand-primary-strong;
+      transition: all 300ms ease;
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $brand-primary-subtle;
+        border-radius: 8px;
+        z-index: -2;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: $brand-primary-strong;
+        transition: all 300ms ease;
+        border-radius: 8px;
+        z-index: -1;
+      }
+      &:hover {
+        color: $text_icons-onPrimary;
+        &:before {
+          width: 100%;
+        }
+      }
+
+      &:active {
+        color: $text_icons-onPrimary;
+        &:after {
+          background: #ccc144;
+        }
+        &:before {
+          background: #ccc144;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .header {
+    .wrapper {
+      .logo {
+        .logoBig {
+          display: none;
+        }
+
+        .logoMini {
+          display: block;
+          margin-left: -4px;
+        }
+      }
+    }
+    .navigation ul {
+      li {
+        display: flex;
+        align-items: center;
+        padding: 0 6px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 0 16px;
+    height: 64px;
+    border-bottom: 2px solid $text_icons-Borders;
+    border-radius: 0;
+    position: relative;
+    .wrapper {
+      .logo {
+        .logoBig {
+          display: block;
+        }
+
+        .logoMini {
+          display: none;
+        }
+      }
+    }
+    .navigation {
+      display: none;
+    }
+
+    .navigation_mobile {
+      display: block;
+
+
+      .mobileHidden {
+        display: none;
+        &:not(.active_dropdown) {
+          width: 0px;
+          transition: width 1s ease-in-out;
+        }
+      }
+
+      .mobile_dropdown {
+        display: block;
+        width: -moz-fit-content;
+        width: 375px;
+        height: calc(100vh - 60px);
+        top: 60px;
+        right: 0;
+        padding: 24px 0px;
+        background: rgb(18, 18, 18);
+        position: absolute;
+
+        &.active_dropdown {
+          width: 375px;
+          transition: width 1s ease-in-out;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          list-style-type: none;
+
+          li {
+            height: 48px;
+            display: flex;
+            align-items: center;
+            &:first-of-type {
+              border-bottom: 2px solid $brand-primary-strong;
+            }
+
+            &:last-of-type {
+              position: relative;
+            }
+
+            a {
+              color: $text_icons-Primary;
+              text-decoration: none;
+              font-size: 1rem;
+              font-weight: 600;
+              line-height: 24px;
+              padding: 0 16px;
+            }
+
+            button {
+              padding: 0 16px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+            }
+
+            .dropdown_btn_wrapper {
+              position: relative;
+              width: 100%;
+              margin-bottom: 8px;
+            }
+
+            .dropdown_wrapper {
+              display: none;
+              position: absolute;
+              width: calc(100% - 32px);
+              padding: 12px;
+              margin: 16px;
+              border: 2px solid $text_icons-Borders;
+              border-radius: 8px;
+              background: $bg-secondary;
+              top: 40px;
+
+              .dropdown {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+
+                .dropdown_link {
+                  display: flex;
+                  gap: 16px;
+                  text-decoration: none;
+                  align-items: flex-start;
+                  padding: 12px;
+                  white-space: normal;
+
+                  a {
+                    padding: 0;
+                  }
+
+                  div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+
+                    .dropdown_title {
+                      font-size: 1rem;
+                      font-weight: 600;
+                      line-height: 24px;
+                      color: $text_icons-Primary;
+                    }
+                    .dropdown_description {
+                      font-size: 0.875rem;
+                      font-weight: 400;
+                      line-height: 20px;
+                      color: $text_icons-Secondary;
+                    }
+                  }
+                }
+              }
+            }
+
+            &:hover .dropdown_wrapper {
+              display: block;
+            }
+
+            &:hover .chevronDown {
+              z-index: 10;
+              transform: rotateX(180deg);
+            }
+          }
+        }
+      }
+    }
+
+    .actions {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .header {
+    .wrapper {
+      .navigation_mobile {
+        .mobile_dropdown {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+/*
+Состояние активной вкладки добавить в js
+
+.navigation ul li:active {
+
+  border-bottom: 2px solid $brand-primary-strong;
+}
+
+*/
+
+
+
+
+

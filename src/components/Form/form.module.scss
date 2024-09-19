@@ -1,0 +1,268 @@
+@import "src/scss/variables";
+@import "src/scss/mixin";
+
+.form__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 64px;
+  padding: 96px 32px;
+  width: 100%;
+  grid-template-areas:
+    "image form";
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 800px;
+    grid-area: form;
+
+    .form_title {
+      color: $text_icons-Primary;
+      font-size: 2.25rem;
+      font-weight: 600;
+      line-height: 44px;
+      letter-spacing: -0.72px;
+      margin-bottom: 16px;
+      @media screen and (max-width: 767px) {
+        font-size: 1.875rem;
+        line-height: 38px;
+      }
+    }
+
+    .form_subtitle {
+      color: $text_icons-Secondary;
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 30px;
+      margin-bottom: 60px;
+      @media screen and (max-width: 767px) {
+        font-size: 1rem;
+        line-height: 150%;
+      }
+    }
+
+    h4 {
+      color: $text_icons-Primary;
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      margin-bottom: 20px;
+    }
+
+    .form_personal {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 12px;
+      grid-row-gap: 12px;
+      grid-template-areas:
+      "first last"
+      "city city";
+      margin-bottom: 36px;
+
+      .form_firstname {
+        grid-area: first;
+      }
+
+      .form_lastname {
+        grid-area: last;
+      }
+
+      .form_city {
+        grid-area: city;
+      }
+    }
+
+    .form_contact {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 8px;
+      grid-row-gap: 12px;
+      grid-template-areas:
+      "iti iti iti iti"
+      "email email email email";
+      margin-bottom: 24px;
+
+      .flag_dropdown {
+        grid-area: flag;
+      }
+
+      .form_email {
+        grid-area: email;
+      }
+    }
+
+    input {
+      height: 44px;
+      padding: 0 12px;
+      border-radius: 10px;
+      background: $bg-evenHigher;
+      border: none;
+      outline: none;
+      color: $text_icons-Secondary;
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: -0.41px;
+      font-family: "Inter", sans-serif;
+      width: 100%;
+    }
+
+    .form_btn {
+      width: 100%;
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: 1px solid $brand-primary-strong;
+      background: $brand-primary-strong;
+      box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+      color: $bg-secondary;
+      font-family: Inter;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 24px;
+    }
+  }
+  .image {
+    border-radius: 24px;
+    background: var(--background-bg-secondary, #212121);
+    overflow: hidden;
+    padding-top: 28px;
+    max-height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    grid-area: image;
+    @media screen and (max-width: 767px) {
+    display: none;
+    }
+
+    .formImage {
+      max-width: 130%;
+      @media screen and (max-width: 991px) {
+        max-width: 130%;
+      }
+    }
+  }
+}
+.popup {
+  grid-template-columns: 1fr;
+  padding: 16px;
+  gap: 0;
+}
+
+.form_checkbox__wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 48px;
+
+  .custom_checkbox__wrapper {
+    position: relative;
+  }
+
+  .custom_checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  .custom_checkbox + label{
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+
+  .custom_checkbox + label::before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-radius: 6px;
+      border: 1px solid $text_icons-Borders;
+      background: $bg-secondary;
+  }
+  .custom_checkbox:checked + .form_checkbox::before {
+    border-radius: 4px;
+    background: url("img/checkbox.svg") no-repeat 7px 9px;
+    background-size: auto;
+    background-position: center;
+    background-color: $brand-secondary-strong;
+    width: 20px;
+    height: 20px;
+  }
+
+  .form_checkbox__agree {
+    color: $text_icons-Secondary;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+    margin-left: 30px;
+
+    a {
+      color: $text_icons-Secondary;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 24px;
+      text-decoration-line: underline;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 991px) {
+
+}
+
+@media screen and (max-width: 767px) {
+  .form__wrapper {
+    grid-template-columns: 1fr;
+    padding: 64px 16px;
+    grid-template-areas:
+    "form";
+    .intro {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+
+}
+
+.formPopup {
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+  width: 300px;
+  height: 80px;
+  background: $bg-secondary;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-radius: 16px;
+  @media screen and (max-width: 767px) {
+    top: 8px;
+  }
+
+  p{
+    font-size: 1rem;
+    color: $brand-primary-strong;
+
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: $text_icons-Secondary;
+  transition: background-color 5000s ease-in-out 0s;
+}
