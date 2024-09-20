@@ -120,14 +120,14 @@ export const Header = () => {
                   Home
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to='/about' onClick={() => openDropdown()}>
                   About us
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <button className={s.dropdown_btn} type='button' onClick={() => openSubDropdown()}>
-                  <span>Partnership</span>
+                  <span>Для партнеров</span>
                   <img
                     alt='dropdown button'
                     className={isOpenSubDropdown ? s.chevronDown : ''}
@@ -163,13 +163,13 @@ export const Header = () => {
                           />
                         </svg>
                         <div>
-                          <p className={s.dropdown_title}>Place a Station</p>
+                          <p className={s.dropdown_title}>Работать с нами</p>
                           <p className={s.dropdown_description}>
-                            The latest industry news, updates and info.
+                          Какие плюсы работать с PanoramicView.
                           </p>
                         </div>
                       </Link>
-                      <Link
+                      {/* <Link
                         className={s.dropdown_link}
                         to='/partnership'
                         onClick={() => openDropdown()}
@@ -196,7 +196,7 @@ export const Header = () => {
                             Learn how our customers are making big changes.
                           </p>
                         </div>
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 )}

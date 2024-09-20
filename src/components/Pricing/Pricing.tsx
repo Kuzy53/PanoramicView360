@@ -5,6 +5,7 @@ import s from './pricing.module.scss';
 import Cays1 from '../../assets/img/Cays1.png';
 import Cays2 from '../../assets/img/Cays2.png';
 import Cays3 from '../../assets/img/Cays3.webp';
+import { Link } from 'react-router-dom';
 
 export const Pricing = () => (
   <section className={s.content} id='Pricing'>
@@ -20,13 +21,13 @@ export const Pricing = () => (
       <div className={`${s.card} ${s.card1}`}>
         <img alt='Cays1' className={s.Cays} src={Cays1} />
         <button className={s.card_button} type='button'>
-          Подробнее
+          <Link to='https://kuzy53.github.io/Panoramic-View/' className={s.card_link}>Подробнее</Link>
         </button>
       </div>
       <div className={`${s.card} ${s.card2}`}>
         <img alt='Cays2' className={s.Cays} src={Cays2} />
         <button className={s.card_button} type='button'>
-          Подробнее
+        <Link to='https://kuzy53.github.io/pano-case/' className={s.card_link}>Подробнее</Link>
         </button>
       </div>
       <div className={`${s.card} ${s.card3}`}>

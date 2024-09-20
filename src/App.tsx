@@ -37,17 +37,19 @@ const ScrollToTop = () => {
 
 const App = () => (
   <div className={s.App}>
-    <AnimatedCursor
-      color='255, 241, 85'
-      innerScale={3}
-      innerSize={20}
-      outerAlpha={1}
-      outerScale={0}
-      outerSize={0}
-      innerStyle={{
-        mixBlendMode: 'difference',
-      }}
-    />
+    <div className={s.cursor_mob}>
+      <AnimatedCursor
+        color='255, 241, 85'
+        innerScale={3}
+        innerSize={20}
+        outerAlpha={1}
+        outerScale={0}
+        outerSize={0}
+        innerStyle={{
+          mixBlendMode: 'difference',
+        }}
+      />
+    </div>
     <div className={s.app_wrapper}>
       <Header />
       <Navigation />
